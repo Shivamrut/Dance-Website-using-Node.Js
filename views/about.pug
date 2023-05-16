@@ -1,0 +1,34 @@
+extends base.pug 
+block scripts
+    script(src='../static/index.js')
+
+block style
+    style 
+        include ../static/style2.css
+        include ../static/styleAbout.css
+
+block append intro 
+    div#about 
+        div#aboutHead 
+            |About Us:
+        div#aboutBody 
+            | Welcome to Shadow Dance Academy, a premier dance institution dedicated to nurturing the artistry and talent of dancers of all ages and skill levels. With a commitment to excellence and a passion for the performing arts, we provide a comprehensive dance education that inspires creativity, builds technique, and fosters personal growth.
+            br
+            br
+            | Our philosophy centers on the belief that dance is a powerful form of self-expression. Through our carefully crafted curriculum, students develop their technical proficiency while exploring their artistic voice. We prioritize a supportive and inclusive environment where students can thrive, building confidence, discipline, and teamwork.
+            br
+            br
+            | Led by a team of experienced and dedicated instructors, our faculty brings a wealth of knowledge and expertise to the classroom. They are committed to providing personalized attention and guidance to each student, nurturing their individual strengths and helping them reach their full potential.
+            br
+            br
+            div.dcimg
+                img(src="../static/aboutDance.avif", alt="danceGroup", class='dimg')
+            br
+            br
+            | Our state-of-the-art studios provide a spacious and professional setting for our students to learn and grow. Equipped with top-quality dance floors and comfortable amenities, we create an environment conducive to focused practice and artistic exploration.
+            br
+            br
+            | As a vibrant part of the dance community, we offer various performance opportunities throughout the year. From recitals and showcases to competitions and community events, our students have the chance to share their passion and shine on stage.
+            br
+            br
+            | Join Shadow Dance Academy and embark on an extraordinary journey of dance education, artistic expression, and personal growth. Explore our classes, meet our talented faculty, and become part of our thriving dance family.

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SDA - </title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Pacifico&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    
+}
+body{
+    background-color: black;
+    padding-bottom: 40px;
+    background-image: url('../static/bgcover3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 620px;
+    opacity: 1;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 620px;
+}
+#navbar{
+    background-color: #c71818;
+    padding: 13px 14px;
+    font-family:'Cormorant Garamond';
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+    border-bottom: 1px solid black;
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 40px;
+    top: 0;
+    
+}
+#navbar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 50px;
+    
+
+}
+#navbar li{
+    list-style: none;
+    border-radius: 10%;
+    width: 163px;
+    padding-bottom: 70px;
+    /* word-wrap:inherit; */
+
+}
+#navbar li:hover{
+    background-color: #7f0404 ;
+}
+#navbar li a {
+    display: block;
+    text-decoration: none;
+    padding: 15px 30px;
+    color: white;
+    justify-content: center;
+    /* font-size: 30px; */
+    
+}
+
+#introSection{
+
+    height: 780px;
+    color: white;
+    display: flex;
+    justify-content: left;
+    align-items: right;
+    /* background: url('cover.jpg') center no-repeat ; */
+    background-image: url('../static/bgcover3.jpg') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    padding-top: 200px;
+    z-index: 0;
+    font-family: 'Pacifico';
+    font-size: 35px;
+    padding-left: 30px;
+}
+#introSectionDiv1
+{
+    width: 40%;
+}
+#introSectionDiv2
+{
+    align-items: right;
+    width:15%;
+    margin-right: 10px;
+    margin-left: auto;
+    font-size: 20px;
+    margin-top: -80px;
+    /* padding-top: 0; */
+    height: 150px;
+}
+
+
+#footer{
+    height: 40px;
+    background-color: grey  ;
+    border: 3px solid black;
+    border-radius: 2px;
+    /* z-index: 1; */
+    display: flex;
+    justify-content: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    bottom: 0;
+}
+
+#logo
+{
+    width: 60px;
+    height: 60px;
+    
+}
+
+#danceLogo
+{
+    color: white;
+    font-family: 'pacifico';
+    font-weight: bold;
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+
+}
+      #introSection
+{
+    padding-top: 100px;
+}
+#about
+{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+#aboutHead
+{
+    padding-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-family: 'Cascadia Code SemiBold';
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+#aboutBody
+{
+    background-color: rgb(183, 180, 180);
+    
+    color: black;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    width: 75%;
+    justify-content: center;
+    overflow: auto;
+    margin-left: 175px;
+    font-size: 30px;
+    text-align: left;
+    font-family: 'Ink Free';
+    font-weight: bolder;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+}
+.dcimg
+{
+    width: 100%;
+    text-align: center;
+}
+.dimg
+{
+    width: 500px;
+    text-align: center;
+}
+    </style>
+    <script src="../static/index.js"></script>
+  </head>
+  <body> 
+    <nav id="navbar">
+      <ul id="navul"> 
+        <div id="danceLogo"><img src="../static/dance.png" id="logo">SDA</div>
+        <li><a href="/">Home</a> </li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/services">Services </a></li>
+        <li><a href="/classes">Class Info </a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+    </nav>
+    <section id="introSection">
+      <div id="about"> 
+        <div id="aboutHead">
+           About Us:</div>
+        <div id="aboutBody">
+           Welcome to Shadow Dance Academy, a premier dance institution dedicated to nurturing the artistry and talent of dancers of all ages and skill levels. With a commitment to excellence and a passion for the performing arts, we provide a comprehensive dance education that inspires creativity, builds technique, and fosters personal growth.<br><br>Our philosophy centers on the belief that dance is a powerful form of self-expression. Through our carefully crafted curriculum, students develop their technical proficiency while exploring their artistic voice. We prioritize a supportive and inclusive environment where students can thrive, building confidence, discipline, and teamwork.<br><br>Led by a team of experienced and dedicated instructors, our faculty brings a wealth of knowledge and expertise to the classroom. They are committed to providing personalized attention and guidance to each student, nurturing their individual strengths and helping them reach their full potential.<br><br>
+          <div class="dcimg"><img class="dimg" src="../static/aboutDance.avif" alt="danceGroup"></div><br><br>Our state-of-the-art studios provide a spacious and professional setting for our students to learn and grow. Equipped with top-quality dance floors and comfortable amenities, we create an environment conducive to focused practice and artistic exploration.<br><br>As a vibrant part of the dance community, we offer various performance opportunities throughout the year. From recitals and showcases to competitions and community events, our students have the chance to share their passion and shine on stage.<br><br>Join Shadow Dance Academy and embark on an extraordinary journey of dance education, artistic expression, and personal growth. Explore our classes, meet our talented faculty, and become part of our thriving dance family.
+        </div>
+      </div>
+    </section>
+    <footer id="footer">
+       Copyright © 2023 Shadow Dance Academy</footer>
+  </body>
+</html>

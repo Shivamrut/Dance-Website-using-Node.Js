@@ -1,0 +1,61 @@
+extends base.pug
+
+block scripts
+    script(src='../static/index.js')
+block style 
+    style 
+        include ../static/style.css
+
+block append intro 
+    div#introSectionDiv1
+        br
+        br
+        br
+        br
+        
+        h1 Welcome to Shadow Dance Academy
+        
+        //- h1 'Dancers don't need wings to fly'
+    div#introSectionDiv2 
+        
+        |'Dancers don't need wings to fly'
+
+block append afterintro 
+    div#introCoverSection 
+        section#danceSection 
+            div#danceSectionDiv1
+                | Dance styles we offer
+            div.card#card1 
+                //- p This is a para
+            div.card#card2
+                //- p This is a para
+            div.card#card3
+                //- p This is a para
+        
+    section#visionSection 
+        div#visionSectionDiv1  
+            h1 Our Vision 
+        div#visionSectionDiv2 
+            | Our vision is to inspire and nurture the love of dance in individuals of all ages and abilities. We strive to create a welcoming and inclusive environment where students can discover their passion, enhance their skills, and unleash their creativity. Through exceptional training and transformative experiences, we aim to empower dancers to reach their full potential and embrace the joy of movement.
+
+    section#missionSection 
+        div#missionSectionDiv1 
+            h1 Our Mission 
+        div#missionSectionDiv2
+            |Our mission is to provide high-quality dance education that fosters artistic expression, technical excellence, and personal growth. We are dedicated to nurturing a supportive community that encourages teamwork, discipline, and self-confidence. Through innovative classes, performances, and outreach programs, we aim to enrich lives and inspire a lifelong appreciation for dance in our students and the broader community.
+    section#sponsorSection 
+        div#sponsorSectionDiv1
+            h3 Our sponsors
+        br
+        br
+        div.logos 
+            div#nike 
+            div#adidas 
+            div#air 
+            div#fb 
+                
+        div.logos
+            div#ig 
+            div#puma 
+            div#twitter 
+            div#reebok 

@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    title SDA - #{pageName}
+    block style 
+    block scripts
+  body 
+    nav#navbar
+        ul#navul 
+            div#danceLogo
+                img(src='../static/dance.png')#logo
+                |SDA
+            li #[a(href='/') Home] 
+            li #[a(href='/about') About]
+            li #[a(href='/services') Services ]
+            //- li #[a(href='/classes') Class Info ]
+            li #[a(href='/contact') Contact Us]
+        
+    section#introSection
+        block intro
+
+    block afterintro   
+            
+        
+        
+    footer#footer 
+        | Copyright © 2023 Shadow Dance Academy
+    
+    block foot
+    
+      

@@ -1,0 +1,59 @@
+body{
+    height: 100%;
+}
+#service
+{
+    padding-top: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+#serviceHead
+{
+    font-size: 40px;
+    font-family: 'broadway';
+    /* padding-bottom: 30px; */
+}
+#serviceBody
+{
+    font-size: 25px;
+    margin-left: 85px;
+    height:535px;
+    overflow: auto;
+    padding: 50px;
+    padding-bottom: 50px;
+}
+#introSection
+{
+    padding-top: 100px;
+}
+.sb1
+{
+    font-family: 'Cascadia Code SemiBold';
+}
+.sb2
+{
+    padding-left: 80px;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+#footer
+{
+    margin-bottom: -40px;
+}
+
+.sdimg
+{
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    height: auto;
+
+}
+
+.img 
+{
+    border-radius: 40px;
+    width: 75%;
+    height: auto;
+    padding: 20px;
+}

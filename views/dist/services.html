@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SDA - </title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Pacifico&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    
+}
+body{
+    background-color: black;
+    padding-bottom: 40px;
+    background-image: url('../static/bgcover3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 620px;
+    opacity: 1;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 620px;
+}
+#navbar{
+    background-color: #c71818;
+    padding: 13px 14px;
+    font-family:'Cormorant Garamond';
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+    border-bottom: 1px solid black;
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 40px;
+    top: 0;
+    
+}
+#navbar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 50px;
+    
+
+}
+#navbar li{
+    list-style: none;
+    border-radius: 10%;
+    width: 163px;
+    padding-bottom: 70px;
+    /* word-wrap:inherit; */
+
+}
+#navbar li:hover{
+    background-color: #7f0404 ;
+}
+#navbar li a {
+    display: block;
+    text-decoration: none;
+    padding: 15px 30px;
+    color: white;
+    justify-content: center;
+    /* font-size: 30px; */
+    
+}
+
+#introSection{
+
+    height: 780px;
+    color: white;
+    display: flex;
+    justify-content: left;
+    align-items: right;
+    /* background: url('cover.jpg') center no-repeat ; */
+    background-image: url('../static/bgcover3.jpg') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    padding-top: 200px;
+    z-index: 0;
+    font-family: 'Pacifico';
+    font-size: 35px;
+    padding-left: 30px;
+}
+#introSectionDiv1
+{
+    width: 40%;
+}
+#introSectionDiv2
+{
+    align-items: right;
+    width:15%;
+    margin-right: 10px;
+    margin-left: auto;
+    font-size: 20px;
+    margin-top: -80px;
+    /* padding-top: 0; */
+    height: 150px;
+}
+
+
+#footer{
+    height: 40px;
+    background-color: grey  ;
+    border: 3px solid black;
+    border-radius: 2px;
+    /* z-index: 1; */
+    display: flex;
+    justify-content: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    bottom: 0;
+}
+
+#logo
+{
+    width: 60px;
+    height: 60px;
+    
+}
+
+#danceLogo
+{
+    color: white;
+    font-family: 'pacifico';
+    font-weight: bold;
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+
+}
+      body{
+    height: 100%;
+}
+#service
+{
+    padding-top: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+#serviceHead
+{
+    font-size: 40px;
+    font-family: 'broadway';
+    /* padding-bottom: 30px; */
+}
+#serviceBody
+{
+    font-size: 25px;
+    margin-left: 85px;
+    height:535px;
+    overflow: auto;
+    padding: 50px;
+    padding-bottom: 50px;
+}
+#introSection
+{
+    padding-top: 100px;
+}
+.sb1
+{
+    font-family: 'Cascadia Code SemiBold';
+}
+.sb2
+{
+    padding-left: 80px;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+#footer
+{
+    margin-bottom: -40px;
+}
+
+.sdimg
+{
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    height: auto;
+
+}
+
+.img 
+{
+    border-radius: 40px;
+    width: 75%;
+    height: auto;
+    padding: 20px;
+}
+    </style>
+    <script src="../static/index.js"></script>
+  </head>
+  <body> 
+    <nav id="navbar">
+      <ul id="navul"> 
+        <div id="danceLogo"><img src="../static/dance.png" id="logo">SDA</div>
+        <li><a href="/">Home</a> </li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/services">Services </a></li>
+        <li><a href="/classes">Class Info </a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+    </nav>
+    <section id="introSection">
+      <div id="service">
+        <div id="serviceHead">We provide the following services: </div>
+        <div id="serviceBody"> 
+          <div class="sb1">At Shadow Dance Academy, we pride ourselves on providing a comprehensive range of dance services to cater to the diverse needs and interests of our clients. Whether you are a beginner looking to explore the art of dance or a seasoned performer seeking to refine your skills, our professional and experienced instructors are dedicated to helping you achieve your goals. Here are the exceptional services we offer:<br><br></div>
+          <div class="sb2">
+            <ol> 
+              <li>
+                 Dance Classes:
+                <ul> 
+                  <li>We offer a wide variety of dance classes for all ages and skill levels, including ballet, jazz, contemporary, hip-hop, tap, and more.</li>
+                  <li>Our classes are designed to foster creativity, enhance technique, and develop strength and flexibility in a supportive and encouraging environment.</li>
+                  <li>Experienced instructors guide students through structured curriculum, ensuring progressive learning and growth.</li>
+                </ul><br>
+                <div class="sdimg"> <br><img class="img" src="../static/servicedance1.jpg" alt="dance1"></div>
+              </li><br><br>
+              <li>
+                 Private Lessons:
+                <ul> 
+                  <li>Our personalized private lessons provide an exclusive learning experience tailored to your individual needs and goals.</li>
+                  <li>Benefit from one-on-one attention and personalized feedback to refine your technique, improve performance skills, or prepare for auditions and competitions.</li>
+                  <li>Private lessons are available for dancers of all ages and levels, from beginners to advanced.</li>
+                </ul>
+              </li><br><br>
+              <li>Choreography Services:
+                <ul> 
+                  <li>Our talented choreographers specialize in creating captivating and unique dance routines for various occasions.</li>
+                  <li>Whether you're preparing for a special event, such as a wedding or a corporate function, or need a choreographed piece for a performance or competition, we can bring your vision to life.</li>
+                  <li>We work closely with you to understand your preferences and deliver choreography that highlights your strengths and showcases your style.</li>
+                </ul>
+              </li><br><br>
+              <li>Dance Fitness Classes:
+                <ul>
+                  <li>Engage in energetic and fun-filled dance fitness classes that combine dance routines with cardio and strength training exercises.</li>
+                  <li>Our dance fitness classes are suitable for all fitness levels, helping you improve endurance, tone muscles, and boost your overall fitness while enjoying the rhythm and joy of dance.</li>
+                </ul><br>
+                <div class="sdimg"> <br><img class="img" src="../static/servicedance2.webp" alt="dance2"></div>
+              </li><br><br>
+              <li>Performance Opportunities:
+                <ul>
+                  <li>We offer various performance opportunities throughout the year, allowing our students to showcase their talent and progress.</li>
+                  <li>From recitals and showcases to community events and competitions, our dancers have the chance to shine on stage and build confidence in their abilities.</li>
+                </ul>
+              </li><br><br>
+              <li>Special Workshops and Masterclasses:
+                <ul>
+                  <li>We regularly organize workshops and masterclasses conducted by renowned guest instructors and industry professionals.</li>
+                  <li>These special events provide unique learning experiences, exposing dancers to different styles, techniques, and perspectives to broaden their horizons and inspire their growth.</li>
+                </ul>
+              </li><br><br>
+              <li>Dance Camps:
+                <ul>
+                  <li>During school breaks, we offer exciting dance camps that combine intensive training, fun activities, and the opportunity to bond with fellow dancers.</li>
+                  <li>Our dance camps cater to different age groups and dance styles, providing a nurturing environment for dancers to improve their skills and create lasting memories.</li>
+                </ul>
+              </li><br><br>
+              <li>Dancewear and Accessories:
+                <ul>
+                  <li>Browse our onsite dancewear boutique, where you can find a wide range of quality dancewear, shoes, and accessories to meet your needs.</li>
+                  <li>Our knowledgeable staff can assist you in finding the perfect attire and equipment to support your dance practice and enhance your performance.</li><br><br>
+                </ul><br>
+                <div class="sdimg"> <br><img class="img" src="../static/servicedance3.avif" alt="dance3"></div>
+              </li>
+            </ol>
+          </div>
+          <div class="sb1">At Shadow Dance Academy, we are passionate about dance and committed to providing exceptional services that inspire, nurture, and empower our clients. Join us on this beautiful journey of self-expression, creativity, and movement. Contact us today to learn more about our services or to enroll in a class that suits your interests and aspirations.</div>
+        </div>
+      </div>
+    </section>
+    <footer id="footer">
+       Copyright © 2023 Shadow Dance Academy</footer>
+  </body>
+</html>

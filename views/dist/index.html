@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SDA - </title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Pacifico&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    
+}
+body{
+    background-color: black;
+    padding-bottom: 40px;
+    background-image: url('../static/bgcover3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 620px;
+    opacity: 1;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 620px;
+}
+#navbar{
+    background-color: #c71818;
+    padding: 13px 14px;
+    font-family:'Cormorant Garamond';
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+    border-bottom: 1px solid black;
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 40px;
+    top: 0;
+    
+}
+#navbar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 50px;
+    
+
+}
+#navbar li{
+    list-style: none;
+    border-radius: 10%;
+    width: 163px;
+    padding-bottom: 70px;
+    /* word-wrap:inherit; */
+
+}
+#navbar li:hover{
+    background-color: #7f0404 ;
+}
+#navbar li a {
+    display: block;
+    text-decoration: none;
+    padding: 15px 30px;
+    color: white;
+    justify-content: center;
+    /* font-size: 30px; */
+    
+}
+
+#introSection{
+
+    height: 780px;
+    color: white;
+    display: flex;
+    justify-content: left;
+    align-items: right;
+    /* background: url('cover.jpg') center no-repeat ; */
+    background-image: url('../static/cover.jpg') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    padding-top: 200px;
+    z-index: 0;
+    font-family: 'Pacifico';
+    font-size: 35px;
+    padding-left: 30px;
+}
+#introSectionDiv1
+{
+    width: 40%;
+}
+#introSectionDiv2
+{
+    align-items: right;
+    width:15%;
+    margin-right: 10px;
+    margin-left: auto;
+    font-size: 20px;
+    margin-top: -80px;
+    /* padding-top: 0; */
+    height: 150px;
+}
+
+#sponsorSection
+{
+    height: 750px;
+    background-color: #c71818;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+
+}
+#sponsorSectionDiv1
+{
+    font-size: 90px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 20px;
+    text-decoration: underline 5px solid black;
+    text-underline-offset: 10px;
+    height: 120px;
+}
+#footer{
+    height: 40px;
+    background-color: grey  ;
+    border: 3px solid black;
+    border-radius: 2px;
+    /* z-index: 1; */
+    display: flex;
+    justify-content: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    bottom: 0;
+}
+#visionSection
+{
+    height: 400px;
+    padding-top: 25px;
+    background-color: rgb(26, 11, 11);
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+    /* justify-content: center; */
+}
+
+#missionSection
+{
+    height: 400px;
+    padding-top: 25px;
+    background-color: rgb(41, 15, 15);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* flex-direction: column; */
+
+}
+
+#visionSectionDiv1
+{
+    text-align: center;
+    font-size: 60px;
+    /* border-bottom: 2px solid white; */
+    /* margin-left: 575px; */
+    text-decoration: underline 2px;
+    text-underline-offset: 8px;
+    width: auto;
+    
+}
+
+#visionSectionDiv2
+{
+    margin-left: 150px;
+    margin-right: 80px;
+    padding-top: 20px;
+    font-size: 20px;
+    font-family: 'pacifico';
+}
+
+
+
+
+#missionSectionDiv1
+{
+    text-align: center;
+    font-size: 60px;
+    /* border-bottom: 2px solid white; */
+    /* margin-left: 575px; */
+    text-decoration: underline 2px;
+    text-underline-offset: 8px;
+    width: auto;
+    
+}
+
+#missionSectionDiv2
+{
+    margin-left: 150px;
+    margin-right: 80px;
+    padding-top: 20px;
+    font-size: 20px;
+    font-family: 'pacifico';
+}
+#danceSection
+{
+    background-color: black;
+    width: 55%;
+    
+    padding-bottom: 25px;
+    margin: auto;
+    display: block;
+}
+#danceSectionDiv1{
+    padding-top: 25px;
+    text-align: center;
+    font-size: 80px;
+    /* border-bottom: 2px solid white; */
+    /* margin-left: 575px; */
+    font-family: 'Cormorant Garamond';
+    text-decoration: underline 2px;
+    text-underline-offset: 8px;
+    font-weight: bold;
+    width: auto;
+    color: white;
+}
+.card{
+    display: inline-block;
+    border:2px solid white;
+    color: white;
+    border-radius: 10px;
+    width: 28%;
+    margin: 23px 22px;
+    height: 300px;
+}
+
+#card1
+{
+    background-image: url('../static/card1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+
+}
+#card2
+{
+    background-image: url('../static/card2.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+#card3
+{
+    background-image: url('../static/card3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.logos
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#nike
+{
+    background-image: url(../static/nike.png);
+    /* z-index: 2; */
+    width: 200px;
+    height: 150px;
+    background-size: cover;
+    /* margin-left: 20px; */
+    margin: 20px;
+}
+
+#adidas
+{
+    background-image: url(../static/adidas.png);
+    /* z-index: 2; */
+    width: 200px;
+    height: 150px;
+    background-size: cover;
+    margin: 20px;
+}
+
+#air
+{
+    background-image: url(../static/air.png);
+    /* z-index: 2; */
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    margin: 20px;
+}
+
+#fb
+{
+    background-image: url(../static/fb.png);
+    /* z-index: 2; */
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    margin: 20px;
+}
+#ig
+{
+    background-image: url(../static/ig.png);
+    /* z-index: 2; */
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    margin: 20px;
+}
+#puma
+{
+    background-image: url(../static/puma.png);
+    /* z-index: 2; */
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    /* margin-left: 20px; */
+    margin: 20px;
+    margin-top: -40px;
+
+}
+#twitter
+{
+    background-image: url(../static/twitter.png);
+    /* z-index: 2; */
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    margin: 20px;
+}#reebok
+{
+    background-image: url(../static/reebok.png);
+    /* z-index: 2; */
+    width: 400px;
+    height: 115px;
+    background-size: cover;
+    margin: 20px;
+}
+#logo
+{
+    width: 60px;
+    height: 60px;
+    
+}
+
+#danceLogo
+{
+    color: white;
+    font-family: 'pacifico';
+    font-weight: bold;
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#introCoverSection
+{
+    width: 100%;
+    background-color: black;
+}
+
+    </style>
+    <script src="../static/index.js"></script>
+  </head>
+  <body> 
+    <nav id="navbar">
+      <ul id="navul"> 
+        <div id="danceLogo"><img src="../static/dance.png" id="logo">SDA</div>
+        <li><a href="/">Home</a> </li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/services">Services </a></li>
+        <li><a href="/classes">Class Info </a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+    </nav>
+    <section id="introSection">
+      <div id="introSectionDiv1"><br><br><br><br>
+        <h1>Welcome to Shadow Dance Academy</h1>
+      </div>
+      <div id="introSectionDiv2">
+         'Dancers don't need wings to fly'</div>
+    </section>
+    <div id="introCoverSection"> 
+      <section id="danceSection"> 
+        <div id="danceSectionDiv1">Dance styles we offer</div>
+        <div class="card" id="card1"> </div>
+        <div class="card" id="card2"></div>
+        <div class="card" id="card3"></div>
+      </section>
+    </div>
+    <section id="visionSection"> 
+      <div id="visionSectionDiv1"> 
+        <h1>Our Vision </h1>
+      </div>
+      <div id="visionSectionDiv2">
+         Our vision is to inspire and nurture the love of dance in individuals of all ages and abilities. We strive to create a welcoming and inclusive environment where students can discover their passion, enhance their skills, and unleash their creativity. Through exceptional training and transformative experiences, we aim to empower dancers to reach their full potential and embrace the joy of movement.</div>
+    </section>
+    <section id="missionSection"> 
+      <div id="missionSectionDiv1"> 
+        <h1>Our Mission </h1>
+      </div>
+      <div id="missionSectionDiv2">Our mission is to provide high-quality dance education that fosters artistic expression, technical excellence, and personal growth. We are dedicated to nurturing a supportive community that encourages teamwork, discipline, and self-confidence. Through innovative classes, performances, and outreach programs, we aim to enrich lives and inspire a lifelong appreciation for dance in our students and the broader community.</div>
+    </section>
+    <section id="sponsorSection"> 
+      <div id="sponsorSectionDiv1">
+        <h3>Our sponsors</h3>
+      </div><br><br>
+      <div class="logos"> 
+        <div id="nike"> </div>
+        <div id="adidas"> </div>
+        <div id="air"> </div>
+        <div id="fb"> </div>
+      </div>
+      <div class="logos">
+        <div id="ig"> </div>
+        <div id="puma"> </div>
+        <div id="twitter"> </div>
+        <div id="reebok"> </div>
+      </div>
+    </section>
+    <footer id="footer">
+       Copyright © 2023 Shadow Dance Academy</footer>
+  </body>
+</html>

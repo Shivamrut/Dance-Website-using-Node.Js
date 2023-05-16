@@ -1,0 +1,94 @@
+extends base.pug 
+
+block scripts
+    script(src='../static/index.js')
+
+block style
+    style 
+        include ../static/style2.css
+        include ../static/styleServices.css
+
+block append intro 
+    div#service
+        div#serviceHead
+            |We provide the following services: 
+            
+            
+        div#serviceBody 
+            div.sb1
+                |At Shadow Dance Academy, we pride ourselves on providing a comprehensive range of dance services to cater to the diverse needs and interests of our clients. Whether you are a beginner looking to explore the art of dance or a seasoned performer seeking to refine your skills, our professional and experienced instructors are dedicated to helping you achieve your goals. Here are the exceptional services we offer:
+                br
+                br 
+            div.sb2
+                ol 
+                    li 
+                        |Dance Classes:
+                        ul 
+                            li We offer a wide variety of dance classes for all ages and skill levels, including ballet, jazz, contemporary, hip-hop, tap, and more.
+                            li Our classes are designed to foster creativity, enhance technique, and develop strength and flexibility in a supportive and encouraging environment.
+                            li Experienced instructors guide students through structured curriculum, ensuring progressive learning and growth.
+                        br
+                        div.sdimg 
+                            br
+                            img(src="../static/servicedance1.jpg", alt="dance1",  class='img')
+                    br
+                    br
+                    li 
+                        |Private Lessons:
+                        ul 
+                            li Our personalized private lessons provide an exclusive learning experience tailored to your individual needs and goals.
+                            li Benefit from one-on-one attention and personalized feedback to refine your technique, improve performance skills, or prepare for auditions and competitions.
+                            li Private lessons are available for dancers of all ages and levels, from beginners to advanced.
+                    br
+                    br
+                    li Choreography Services:
+                        ul 
+                            li Our talented choreographers specialize in creating captivating and unique dance routines for various occasions.
+                            li Whether you're preparing for a special event, such as a wedding or a corporate function, or need a choreographed piece for a performance or competition, we can bring your vision to life.
+                            li We work closely with you to understand your preferences and deliver choreography that highlights your strengths and showcases your style.
+                    br
+                    br
+                    li Dance Fitness Classes:
+                        ul
+                            li Engage in energetic and fun-filled dance fitness classes that combine dance routines with cardio and strength training exercises.
+                            li Our dance fitness classes are suitable for all fitness levels, helping you improve endurance, tone muscles, and boost your overall fitness while enjoying the rhythm and joy of dance.
+                        br
+                        div.sdimg 
+                            br
+                            img(src="../static/servicedance2.webp", alt="dance2",  class='img')
+                    br
+                    br
+                    li Performance Opportunities:
+                        ul
+
+                            li We offer various performance opportunities throughout the year, allowing our students to showcase their talent and progress.
+                            li From recitals and showcases to community events and competitions, our dancers have the chance to shine on stage and build confidence in their abilities.
+                    br
+                    br
+                    li Special Workshops and Masterclasses:
+                        ul
+
+                            li We regularly organize workshops and masterclasses conducted by renowned guest instructors and industry professionals.
+                            li These special events provide unique learning experiences, exposing dancers to different styles, techniques, and perspectives to broaden their horizons and inspire their growth.
+                    br
+                    br
+                    li Dance Camps:
+                        ul
+
+                            li During school breaks, we offer exciting dance camps that combine intensive training, fun activities, and the opportunity to bond with fellow dancers.
+                            li Our dance camps cater to different age groups and dance styles, providing a nurturing environment for dancers to improve their skills and create lasting memories.
+                    br
+                    br
+                    li Dancewear and Accessories:
+                        ul
+
+                            li Browse our onsite dancewear boutique, where you can find a wide range of quality dancewear, shoes, and accessories to meet your needs.
+                            li Our knowledgeable staff can assist you in finding the perfect attire and equipment to support your dance practice and enhance your performance.
+                            br
+                            br
+                        br
+                        div.sdimg 
+                            br
+                            img(src="../static/servicedance3.avif", alt="dance3",  class='img')
+            div.sb1
+                | At Shadow Dance Academy, we are passionate about dance and committed to providing exceptional services that inspire, nurture, and empower our clients. Join us on this beautiful journey of self-expression, creativity, and movement. Contact us today to learn more about our services or to enroll in a class that suits your interests and aspirations.

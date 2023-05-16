@@ -1,0 +1,63 @@
+#introSection
+{
+    padding-top: 100px;
+    margin-top: 0px;
+}
+#contact
+{
+    width: 100%;
+    display: block;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+#contactHead
+{
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
+#contactBody
+{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contactForm
+{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.myInput
+{
+     padding: 15px;
+     padding-right: 100px;
+    padding-left: 100px;
+     margin: 12px;
+     font-size: 22px;
+     border-radius: 5px;
+     outline: none;
+     width: 80%;
+}
+
+.btn
+{
+    margin: 12px;
+    width: 18%;
+    align-items: center;
+    padding: 10px 12px;
+    font-size: 30px;
+    border-radius: 10px;
+    background-image: url('../static/dance.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 75px;
+    cursor: pointer;
+    outline: none;
+}
