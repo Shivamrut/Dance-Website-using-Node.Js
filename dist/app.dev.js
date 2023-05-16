@@ -43,6 +43,13 @@ app.get('/classes', function (req, res) {
     'pageName': 'Classes We Provide'
   };
   res.status(200).render('classes.pug', params);
+}); // post endpoints
+
+app.post('/contact', function (req, res) {
+  var params = {
+    'pageName': 'Contact Us'
+  };
+  res.status(200).render('contact.pug', params);
 }); // starting server
 
 app.listen(port, function () {

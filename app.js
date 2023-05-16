@@ -46,6 +46,14 @@ app.get('/classes', (req,res)=>{
 
 });
 
+// post endpoints
+app.post('/contact',(req,res)=>{
+    const params = {'pageName' : 'Contact Us' };
+
+    res.status(200).render('contact.pug',params);
+
+});
+
 // starting server
 app.listen(port, ()=>{
     console.log(`The app is running at http://127.0.0.1/`);
