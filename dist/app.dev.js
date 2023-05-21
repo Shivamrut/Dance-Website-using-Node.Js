@@ -3,12 +3,15 @@
 // importing modules
 var express = require('express');
 
-var path = require('path'); // creating app
+var path = require('path');
+
+var Db = require('./db'); // creating app
 
 
 var app = express();
 var port = 80;
 app.use('/static', express["static"]('static'));
+app.use(express.json());
 app.use(express.urlencoded()); // pug config
 
 app.set('view engine', 'pug');
@@ -46,10 +49,18 @@ app.get('/classes', function (req, res) {
 }); // post endpoints
 
 app.post('/contact', function (req, res) {
-  var params = {
-    'pageName': 'Contact Us'
-  };
-  res.status(200).render('contact.pug', params);
+  var data = req.body;
+  console.log('reqbody: ', data);
+  var db = Db.getSingleInstance();
+  var result = db.createContact(data);
+  result.then(function (data) {
+    console.log(data);
+    res.json({
+      data: data
+    });
+  })["catch"](function (err) {
+    console.log('Error in post contact'); // console.log(err);
+  });
 }); // starting server
 
 app.listen(port, function () {

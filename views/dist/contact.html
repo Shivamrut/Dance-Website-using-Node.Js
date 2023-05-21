@@ -202,7 +202,6 @@ body{
     outline: none;
 }
     </style>
-    <script src="../static/index.js"></script>
   </head>
   <body> 
     <nav id="navbar">
@@ -211,7 +210,6 @@ body{
         <li><a href="/">Home</a> </li>
         <li><a href="/about">About</a></li>
         <li><a href="/services">Services </a></li>
-        <li><a href="/classes">Class Info </a></li>
         <li><a href="/contact">Contact Us</a></li>
       </ul>
     </nav>
@@ -219,18 +217,20 @@ body{
       <div id="contact"> 
         <div id="contactHead">Contact Us</div>
         <div id="contactBody">
-          <form action="/contact" method="post" id="contactForm"> 
+          <form onkeydown="return event.key != 'Enter';" id="contactForm"> 
             <input class="myInput" type="text" name="name" placeholder="Enter your name">
             <input class="myInput" type="phone" name="phone" placeholder="Enter your phone">
             <input class="myInput" type="email" name="email" placeholder="Enter your email id">
             <input class="myInput" type="text" name="address" placeholder="Enter your address">
             <input class="myInput" type="text" name="desc" placeholder="Enter your concern">
-            <button class="btn"></button>
+            <button class="btn" id="submitContact"></button>
           </form>
         </div>
       </div>
     </section>
     <footer id="footer">
        Copyright © 2023 Shadow Dance Academy</footer>
+    <script src="../static/index.js"></script>
+    <script src="../static/contact.js"> </script>
   </body>
 </html>
