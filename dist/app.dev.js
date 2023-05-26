@@ -42,58 +42,52 @@ passportInit(passport);
 app.use(passport.initialize());
 app.use(passport.session()); // get endpoints
 
-app.get('/', function (req, res) {
+app.get('/', isAuthenticated, function (req, res) {
+  var name = req.user.name;
   var params = {
-    'pageName': 'Home'
+    'pageName': 'Home',
+    name: name
   };
   res.status(200).render('index.pug', params);
 });
-app.get('/about', function (req, res) {
+app.get('/about', isAuthenticated, function (req, res) {
   var params = {
     'pageName': 'About'
   };
   res.status(200).render('about.pug', params);
 });
-app.get('/contact', function (req, res) {
+app.get('/contact', isAuthenticated, function (req, res) {
   var params = {
     'pageName': 'Contact Us'
   };
   res.status(200).render('contact.pug', params);
 });
-app.get('/services', function (req, res) {
+app.get('/services', isAuthenticated, function (req, res) {
   var params = {
     'pageName': 'Services'
   };
   res.status(200).render('services.pug', params);
 });
-app.get('/classes', function (req, res) {
+app.get('/classes', isAuthenticated, function (req, res) {
   var params = {
     'pageName': 'Classes We Provide'
   };
   res.status(200).render('classes.pug', params);
 });
-var i = 0;
 app.get('/login', function _callee(req, res) {
-  var obj, test, params;
+  var obj, params;
   return regeneratorRuntime.async(function _callee$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
-          _context.next = 2;
-          return regeneratorRuntime.awrap(req.flash('error'));
-
-        case 2:
-          obj = _context.sent;
-          test = i.toString();
-          i++;
+          obj = req.flash('error');
           params = {
             'pageName': 'Log in to your account',
-            'messages': test
+            'messages': obj
           };
-          console.log('flash: ', obj);
           res.status(200).render('login', params);
 
-        case 8:
+        case 3:
         case "end":
           return _context.stop();
       }
@@ -132,11 +126,11 @@ app.post('/register', function _callee2(req, res) {
             break;
           }
 
-          console.log('User exists');
+          req.flash('registerError', 'Username/email already in use!');
           res.json({
             success: false
           });
-          _context2.next = 16;
+          _context2.next = 17;
           break;
 
         case 11:
@@ -151,31 +145,50 @@ app.post('/register', function _callee2(req, res) {
             username: username,
             password: hashedPassword
           });
+          req.flash('registerError', 'Account created successfully!');
           res.json({
             success: true
           });
 
-        case 16:
-          _context2.next = 21;
+        case 17:
+          _context2.next = 22;
           break;
 
-        case 18:
-          _context2.prev = 18;
+        case 19:
+          _context2.prev = 19;
           _context2.t0 = _context2["catch"](0);
           console.log('Error in post register');
 
-        case 21:
+        case 22:
         case "end":
           return _context2.stop();
       }
     }
-  }, null, null, [[0, 18]]);
+  }, null, null, [[0, 19]]);
 });
 app.get('/register', function (req, res) {
+  // console.log(req.flash());
   var params = {
-    'pageName': 'Register new account'
+    'pageName': 'Register new account',
+    messages: req.flash('registerError')
   };
   res.status(200).render('register', params);
+});
+app.get('/logout', function (req, res) {
+  req.logout(function (err) {
+    if (err) {
+      res.flash('error', 'Error in logging out!');
+      res.redirect('/');
+    } else {
+      req.session.destroy(function (err) {
+        if (err) {
+          console.log('Error in session logout : ', err);
+        } else {
+          res.redirect('/login');
+        }
+      });
+    }
+  });
 }); // post endpoints
 
 app.post('/contact', function (req, res) {
@@ -191,7 +204,16 @@ app.post('/contact', function (req, res) {
   })["catch"](function (err) {
     console.log('Error in post contact'); // console.log(err);
   });
-}); // starting server
+});
+
+function isAuthenticated(req, res, next) {
+  if (req.isAuthenticated()) {
+    return next();
+  } else {
+    res.redirect('/login');
+  }
+} // starting server
+
 
 app.listen(port, function () {
   console.log("The app is running at http://127.0.0.1/");

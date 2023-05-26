@@ -9,7 +9,7 @@ function initializePassport(passport)
         
         try{
             const user = await users.findOne({username:username}).exec();
-            // console.log('check: ',user);
+            console.log('check: ',user);
             if(!user)
             {
                 return done(null,false,{message:'User does not exist'});

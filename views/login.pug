@@ -3,22 +3,23 @@ block style
     style 
         include ../static/style2.css
         include ../static/styleLogin.css
+block navbar 
 block append intro 
-    
-    form( id='loginContainer')
+
+    form( action='/login', method='post', id='loginContainer')
         label(for="username") 
-            |Login
+            |Please Login to continue
         //- - var messages = ['heelo']
         if messages
             each message in messages 
-                h3=message
+                h3(style='color:red')=message
                 
         input(type="text" name='username' id='name'  placeholder='Enter username' required)
         input(type="text" name='password' id='key' placeholder='Enter password' required)
         button(type='submit' id='loginBtn')
             |Login
         label(for="signup") 
-            |Don't have account?
+            |Don't have an account?
             br
             |Register now 
         a(href="/register")  

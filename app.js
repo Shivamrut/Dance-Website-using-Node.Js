@@ -34,45 +34,42 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 // get endpoints
-app.get('/',(req,res)=>{
-    const params = {'pageName' : 'Home' };
+app.get('/', isAuthenticated,(req,res)=>{
+    const name = req.user.name;
+    const params = {'pageName' : 'Home', name:name };
     res.status(200).render('index.pug',params);
 });
 
-app.get('/about', (req,res)=>{
+app.get('/about', isAuthenticated,(req,res)=>{
     const params = {'pageName' : 'About' };
 
     res.status(200).render('about.pug',params);
 
 });
 
-app.get('/contact', (req,res)=>{
+app.get('/contact', isAuthenticated,(req,res)=>{
     const params = {'pageName' : 'Contact Us' };
 
     res.status(200).render('contact.pug',params);
 
 });
 
-app.get('/services', (req,res)=>{
+app.get('/services', isAuthenticated,(req,res)=>{
     const params = {'pageName' : 'Services' };
 
     res.status(200).render('services.pug',params);
 
 });
 
-app.get('/classes', (req,res)=>{
+app.get('/classes', isAuthenticated,(req,res)=>{
     const params = { 'pageName' : 'Classes We Provide'};
 
     res.status(200).render('classes.pug',params);
 
 });
-var i = 0;
 app.get('/login',async (req,res)=>{
-    const obj = await req.flash('error');
-    var test=i.toString();
-    i++;
-    const params = { 'pageName' : 'Log in to your account', 'messages' : test };
-    console.log('flash: ',obj);
+    const obj = req.flash('error');
+    const params = { 'pageName' : 'Log in to your account', 'messages' : obj };
     res.status(200).render('login',params);
 
 })
@@ -89,10 +86,11 @@ app.post('/register',async (req,res)=>{
         const user = await userDb.findOne({$or:[{username: username},{email:email}]}).exec();
         // console.log(typeof user);
         if(user){
-            console.log('User exists');
+            req.flash('registerError','Username/email already in use!');
             res.json({
                 success : false
             });
+            
         }
         else{
             const hashedPassword = await bcrypt.hash(password,10);
@@ -102,6 +100,7 @@ app.post('/register',async (req,res)=>{
                 username:username,
                 password:hashedPassword
             });
+            req.flash('registerError','Account created successfully!');
             res.json({
                 success : true
             });
@@ -114,9 +113,31 @@ app.post('/register',async (req,res)=>{
     
 })
 app.get('/register',(req,res)=>{
-    const params = { 'pageName' : 'Register new account'};
+    // console.log(req.flash());
+    const params = { 'pageName' : 'Register new account', messages: req.flash('registerError')};
     res.status(200).render('register',params);
 
+})
+app.get('/logout',(req,res)=>{
+    req.logout((err)=>{
+        if(err)
+        {
+            res.flash('error','Error in logging out!');
+            res.redirect('/');
+        }
+        else{
+            req.session.destroy((err)=>{
+                if(err)
+                {
+                    console.log('Error in session logout : ', err);
+
+                }
+                else{
+                    res.redirect('/login');
+                }
+            })
+        }
+    })
 })
 // post endpoints
 app.post('/contact',(req,res)=>{
@@ -138,6 +159,15 @@ app.post('/contact',(req,res)=>{
 
 });
 
+function isAuthenticated(req,res,next){
+    if(req.isAuthenticated())
+    {
+        return next();
+    }
+    else{
+        res.redirect('/login');
+    }
+}
 // starting server
 app.listen(port, ()=>{
     console.log(`The app is running at http://127.0.0.1/`);

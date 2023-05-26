@@ -24,9 +24,10 @@ function initializePassport(passport) {
 
           case 3:
             user = _context.sent;
+            console.log('check: ', user);
 
             if (user) {
-              _context.next = 6;
+              _context.next = 7;
               break;
             }
 
@@ -34,7 +35,7 @@ function initializePassport(passport) {
               message: 'User does not exist'
             }));
 
-          case 6:
+          case 7:
             bcrypt.compare(password, user.password).then(function (match) {
               // console.log(match);
               if (match) {
@@ -47,20 +48,20 @@ function initializePassport(passport) {
             })["catch"](function (e) {
               return done(e);
             });
-            _context.next = 12;
+            _context.next = 13;
             break;
 
-          case 9:
-            _context.prev = 9;
+          case 10:
+            _context.prev = 10;
             _context.t0 = _context["catch"](0);
             done(_context.t0);
 
-          case 12:
+          case 13:
           case "end":
             return _context.stop();
         }
       }
-    }, null, null, [[0, 9]]);
+    }, null, null, [[0, 10]]);
   }));
   passport.serializeUser(function (user, done) {
     console.log(user);

@@ -26,6 +26,7 @@ form.addEventListener('submit', function (event) {
     return res.json();
   }).then(function (data) {
     console.log(data);
+    location.reload();
   })["catch"](function (err) {
     console.log('Error in register submit');
   });
