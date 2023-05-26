@@ -1,0 +1,27 @@
+extends base.pug
+
+block style
+    style 
+        include ../static/style2.css
+        include ../static/styleLogin.css
+
+block append intro 
+    form#loginContainer
+        label(for="username") 
+            |Register new account 
+             
+        input(type="text", name='name' ,id='name' , placeholder='Enter your name', required)
+        input(type="text" ,name='email', id='email' , placeholder='Enter your email' ,required)
+        input(type="text", name='username', id='username' , placeholder='Enter username',required)
+        input(type="text", name='password' , id='password' ,placeholder='Enter password',required)
+        button(type='submit', id='registerBtn' )
+            |Register
+        label(for="signup") 
+            |Have an account?
+            br
+            |Login now
+        a(href="/login")  
+            button(type='button')
+                |Login
+block append scripts 
+    script(src="../static/register.js") 

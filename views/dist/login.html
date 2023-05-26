@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SDA - </title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Pacifico&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    
+}
+body{
+    background-color: black;
+    padding-bottom: 40px;
+    background-image: url('../static/bgcover3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 620px;
+    opacity: 1;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 620px;
+}
+#navbar{
+    background-color: #c71818;
+    padding: 13px 14px;
+    font-family:'Cormorant Garamond';
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+    border-bottom: 1px solid black;
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 40px;
+    top: 0;
+    
+}
+#navbar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 50px;
+    
+
+}
+#navbar li{
+    list-style: none;
+    border-radius: 10%;
+    width: 163px;
+    padding-bottom: 70px;
+    /* word-wrap:inherit; */
+
+}
+#navbar li:hover{
+    background-color: #7f0404 ;
+}
+#navbar li a {
+    display: block;
+    text-decoration: none;
+    padding: 15px 30px;
+    color: white;
+    justify-content: center;
+    /* font-size: 30px; */
+    
+}
+
+#introSection{
+
+    height: 780px;
+    color: white;
+    display: flex;
+    justify-content: left;
+    align-items: right;
+    /* background: url('cover.jpg') center no-repeat ; */
+    background-image: url('../static/bgcover3.jpg') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    padding-top: 200px;
+    z-index: 0;
+    font-family: 'Pacifico';
+    font-size: 35px;
+    padding-left: 30px;
+}
+#introSectionDiv1
+{
+    width: 40%;
+}
+#introSectionDiv2
+{
+    align-items: right;
+    width:15%;
+    margin-right: 10px;
+    margin-left: auto;
+    font-size: 20px;
+    margin-top: -80px;
+    /* padding-top: 0; */
+    height: 150px;
+}
+
+
+#footer{
+    height: 40px;
+    background-color: grey  ;
+    border: 3px solid black;
+    border-radius: 2px;
+    /* z-index: 1; */
+    display: flex;
+    justify-content: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    bottom: 0;
+}
+
+#logo
+{
+    width: 60px;
+    height: 60px;
+    
+}
+
+#danceLogo
+{
+    color: white;
+    font-family: 'pacifico';
+    font-weight: bold;
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+
+}
+      #loginContainer
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+#introSection
+{
+    padding-top: 150px;
+}
+
+#loginContainer input ,label{
+    margin: 10px;
+    padding: 10px;
+    font-size: 25px;
+}
+#loginContainer a{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+#loginContainer button{
+    margin: 10px;
+    padding: 10px 20px;
+}
+.flash-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 30px;
+    margin-bottom: 10px;
+  }
+    </style>
+  </head>
+  <body> 
+    <nav id="navbar">
+      <ul id="navul"> 
+        <div id="danceLogo"><img src="../static/dance.png" id="logo">SDA</div>
+        <li><a href="/">Home</a> </li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/services">Services </a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/login">Log in </a></li>
+      </ul>
+    </nav>
+    <section id="introSection">
+      <form id="loginContainer">
+        <label for="username">
+           Login</label>
+        <input type="text" name="username" id="name" placeholder="Enter username" required>
+        <input type="text" name="password" id="key" placeholder="Enter password" required>
+        <button type="submit" id="loginBtn">Login</button>
+        <label for="signup">
+           Don't have account?<br>Register now </label><a href="/register"> 
+          <button type="button">Register</button></a>
+      </form>
+    </section>
+    <footer id="footer">
+       Copyright © 2023 Shadow Dance Academy</footer>
+    <script src="../static/index.js"></script>
+    <script src="../static/login.js"> </script>
+  </body>
+</html>

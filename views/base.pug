@@ -12,11 +12,12 @@ html
             li #[a(href='/') Home] 
             li #[a(href='/about') About]
             li #[a(href='/services') Services ]
-            //- li #[a(href='/classes') Class Info ]
             li #[a(href='/contact') Contact Us]
-        
+            li #[a(href='/login') Log in ]
+    block body
     section#introSection
         block intro
+        
 
     block afterintro   
             
@@ -26,7 +27,8 @@ html
         | Copyright © 2023 Shadow Dance Academy
     
     block foot
+    script(src='../static/index.js')
     block scripts
-
+    
     
       

@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 let instance = null;
 main()
 .then(res => {
-    console.log('Db is connected');
+    console.log('contactDb is connected');
     // console.log(res);
 })
 .catch(err => console.log(err));
@@ -22,6 +22,7 @@ const contact = new mongoose.Schema({
     address:String,
     concern: String
 });
+
 
 const Contact = mongoose.model('Contact',contact);
  

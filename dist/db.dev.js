@@ -10,7 +10,7 @@ var mongoose = require('mongoose');
 
 var instance = null;
 main().then(function (res) {
-  console.log('Db is connected'); // console.log(res);
+  console.log('contactDb is connected'); // console.log(res);
 })["catch"](function (err) {
   return console.log(err);
 });

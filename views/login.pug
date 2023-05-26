@@ -1,0 +1,29 @@
+extends base.pug
+block style
+    style 
+        include ../static/style2.css
+        include ../static/styleLogin.css
+block append intro 
+    
+    form( id='loginContainer')
+        label(for="username") 
+            |Login
+        //- - var messages = ['heelo']
+        if messages
+            each message in messages 
+                h3=message
+                
+        input(type="text" name='username' id='name'  placeholder='Enter username' required)
+        input(type="text" name='password' id='key' placeholder='Enter password' required)
+        button(type='submit' id='loginBtn')
+            |Login
+        label(for="signup") 
+            |Don't have account?
+            br
+            |Register now 
+        a(href="/register")  
+            button(type='button')
+                |Register
+block append scripts 
+    script(src="../static/login.js") 
+    
