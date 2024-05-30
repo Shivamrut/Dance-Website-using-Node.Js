@@ -14,8 +14,8 @@ block append intro
             each message in messages 
                 h3(style='color:red')=message
                 
-        input(type="text" name='username' id='name'  placeholder='Enter username' required)
-        input(type="text" name='password' id='key' placeholder='Enter password' required)
+        input(type="text" name='username' id='name'  placeholder='Enter username' required autocomplete="off")
+        input(type="password" name='password' id='key' placeholder='Enter password' required)
         button(type='submit' id='loginBtn')
             |Login
         label(for="signup") 

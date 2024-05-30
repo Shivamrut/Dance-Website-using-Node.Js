@@ -16,10 +16,10 @@ block append intro
                 else 
                     h2(style='color:lightgreen')=message
         
-        input(type="text", name='name' ,id='name' , placeholder='Enter your name', required)
-        input(type="text" ,name='email', id='email' , placeholder='Enter your email' ,required)
-        input(type="text", name='username', id='username' , placeholder='Enter username',required)
-        input(type="text", name='password' , id='password' ,placeholder='Enter password',required)
+        input(type="text", name='name' ,id='name' , placeholder='Enter your name', required autocomplete="off")
+        input(type="text" ,name='email', id='email' , placeholder='Enter your email' ,required autocomplete="off")
+        input(type="text", name='username', id='username' , placeholder='Enter username',required autocomplete="off")
+        input(type="password", name='password' , id='password' ,placeholder='Enter password',required)
         button(type='submit', id='registerBtn' )
             |Register
         label(for="signup") 
